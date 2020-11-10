@@ -1,4 +1,4 @@
-#include <graphics.h>
+//#include <graphics.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "chess.h"					
@@ -30,7 +30,7 @@ int wrongStart()
 			printf(" ");
 		}
 	gotoxy(1,1);
-	printf("enter initial position ¯ ");
+	printf("enter initial position Â¯ ");
 	return 0;
 }
 
@@ -44,7 +44,7 @@ void cleartext(){
 			printf(" ");
 			}
 	gotoxy(1,1);
-	printf("enter initial position ¯ ");
+	printf("enter initial position Â¯ ");
 }
 
 
@@ -201,7 +201,7 @@ int main()
 				x1=-1;
 				y1=-1;
 				setcolor(0);
-				outtextxy(10,400,"Player Û");
+				outtextxy(10,400,"Player Ã›");
 				if(turn!=0){
 					check();
 					setcolor(2);
@@ -272,7 +272,7 @@ int main()
 			}
 			if(x!=-1 && y!=-1)
 				
-				printf("\nenter final position  ¯ ");
+				printf("\nenter final position  Â¯ ");
 		}
 		else if(x1==-1)
 		{		//Converting lower to upper case
@@ -418,7 +418,7 @@ int main()
 				}
 			cleartext();
 			setcolor(0);
-			outtextxy(10,400,"Player Û");
+			outtextxy(10,400,"Player Ã›");
 			if(turn==0){
 				check();
 				turn=1;
@@ -447,7 +447,7 @@ void printboard(){
 			else
 				setcolor(BLACK);
 
-			outtextxy(270+(j*45),105+(i*45),"ÛÛ");
+			outtextxy(270+(j*45),105+(i*45),"Ã›Ã›");
 
 
 			if(board[i][j]<0)
