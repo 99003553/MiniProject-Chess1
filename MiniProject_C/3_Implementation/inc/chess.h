@@ -4,7 +4,7 @@
 #include "chess.h"					
 //#include <conio.h>
 #include <ctype.h>		
-#include <dos.h>               
+//#include <dos.h>               
 
 
 int main();
