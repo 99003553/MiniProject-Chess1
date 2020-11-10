@@ -1,7 +1,7 @@
 //#include <graphics.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "chess.h"					
+#include <"chess.h>					
 #include <conio.h>
 #include <ctype.h>		
 #include <dos.h>                
