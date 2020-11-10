@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <chess.h>					
-#include <conio.h>
+//#include <conio.h>
 #include <ctype.h>		
-#include <dos.h>                
+//#include <dos.h>                
 
 
 int board[8][8],turn=0,count1=0,count2=0;
