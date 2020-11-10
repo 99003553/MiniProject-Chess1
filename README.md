@@ -1,8 +1,8 @@
 # MiniProject-Chess
 
-![Unit testing](https://github.com/104484/MiniProject-Chess/workflows/Unit%20testing/badge.svg)
-![cppcheck-action](https://github.com/104484/MiniProject-Chess/workflows/cppcheck-action/badge.svg)
-![C/C++ CI](https://github.com/104484/MiniProject-Chess/workflows/C/C++%20CI/badge.svg)
+![Unit testing](https://github.com/stepin104484/MiniProject-Chess/workflows/Unit%20testing/badge.svg)
+![cppcheck-action](https://github.com/stepin104484/MiniProject-Chess/workflows/cppcheck-action/badge.svg)
+![C/C++ CI](https://github.com/stepin104484/MiniProject-Chess/workflows/C/C++%20CI/badge.svg)
 ![Valgrind](https://github.com/stepin104484/MiniProject-Chess/workflows/Valgrind/badge.svg)
 
 
