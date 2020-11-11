@@ -1,4 +1,5 @@
-//#include <graphics.h>
+//Kindly backspace the comments(//) to properly execute the code.
+//#include <graphics.h>   
 //#include < stdlib.h >
 #include <stdio.h>
 #include <chess.h>					
@@ -15,30 +16,9 @@
     printf("%c[%d;%df", 0x1B, y, x); 
 } */
 
-//int wrongStart()
-//{
-//	return 1;
-	/*printf("\nWrong Input\nPress any key to continue...");
-	char ch=getch();
-	if(ch==0){
-		getch();
-		}
-	for(int i=1;i<=30;i++)
-		for(int j=1;j<=4;j++)
-		{
-			gotoxy(i,j);
-			printf(" ");
-		}
-	gotoxy(1,1);
-	printf("enter initial position ¯ ");
-	return 0;*/
-//}
-
-
-
 /////ClearText////
 void cleartext(){
-	//return 1;
+	
 	/*for(int i=1;i<=27;i++)
 		for(int j=1;j<=8;j++){
 			gotoxy(i,j);
@@ -99,17 +79,17 @@ int main()
 
 
 	cleartext();*/
-	int x=-1,y=-1,x1=-1,y1=-1;
-	initialize();
-	wrongStart();
-	pawn(x,y,x1,y1);
-	rook(x,y,x1,y1);
-	queen(x,y,x1,y1);
-	king(x,y,x1,y1);
-	bishop(x,y,x1,y1);
-	horse(x,y,x1,y1);
-	check();
-	gameover();
+	int x=-1,y=-1,x1=-1,y1=-1;  //remove the line
+	initialize();			//remove the line
+	wrongStart();			//remove the line
+	pawn(x,y,x1,y1);			//remove the line
+	rook(x,y,x1,y1);			//remove the line
+	queen(x,y,x1,y1);			//remove the line
+	king(x,y,x1,y1);			//remove the line
+	bishop(x,y,x1,y1);				//remove the line	
+	horse(x,y,x1,y1);				//remove the line
+	check();					//remove the line
+	gameover();						//remove the line
 	
 	
 	
@@ -493,7 +473,7 @@ void printboard(){
 
 
 //int initialize(){
-	  //return 1;
+	  //return 1;			//remove the line
 	  //setcolor(WHITE);
 	 // rectangle(250,90,610,450);
 
@@ -545,7 +525,7 @@ void printboard(){
 /////King/////
 //int king(int x,int y,int x1,int y1)
 //{
-     //return 1;
+     //return 1;			//remove the line
      /*int a = 0;
      if((y1 == y+1 && x1 == x)||(y1 == y-1 && x1 == x)||(y1 == y+1 && x1 == x+1)||(y1 == y+1 && x1 == x-1)||(y1 == y-1 && x1 == x+1)||(y1 == y-1 && x1 == x-1)||(y1 == y && x1 == x+1)||(y1 == y && x1 == x-1)){
 	a = 1;
@@ -573,7 +553,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 //////BISHOP/////
 //int bishop(int x,int y,int x1,int y1)
 //{
-		//return 1;
+		//return 1;			//remove the line
 		/*int a=1,i;
 		if(abs(x1-x)!=abs(y1-y))
 		{
@@ -615,7 +595,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 ///ROOK////
 //int rook(int x,int y,int x1,int y1){
-	//return 1;
+	//return 1;			//remove the line
 	/*int a=1;
 	if(y1==y)
 	{
@@ -669,7 +649,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 ///PAWN/////
 //int pawn(int x,int y,int x1,int y1){
-	//return 1;
+	//return 1;			//remove the line
 	/*int a=0;
 	if(turn==0){
 		if(y==1){
@@ -735,7 +715,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 //int check()
 //{
-	 // return 1;
+	 // return 1;			//remove the line
 	  /*int t=0,i,j,x1,y1;
 	   if(turn==0){
 	     for(i=0;i<=7;i++)
@@ -813,7 +793,7 @@ return 0;*/
 
 //////GAME OVER/////
 //int gameover(){
-	//return 1;
+	//return 1;			//remove the line
 	/*int i,j,a=0,b=0;
 
 	for(i=0;i<=7;i++)
@@ -851,7 +831,7 @@ return 0;*/
 
 ////////QUEEN///////
 //int queen(int x,int y,int x1,int y1){
-  // return 1;
+  // return 1;			//remove the line
   /* if(x==x1||y==y1){
   //if queen moves in + direction
 	 return rook(x,y,x1,y1);
