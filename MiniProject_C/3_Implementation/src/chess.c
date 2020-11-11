@@ -2,7 +2,7 @@
 
 
 int initialize(){
-	  return 1;
+	  return 1;			//remove the line
 	  //setcolor(WHITE);
 	 // rectangle(250,90,610,450);
 
@@ -55,7 +55,7 @@ int initialize(){
 
 int wrongStart()
 {
-	return 1;
+	return 1;		//remove the line
 	/*printf("\nWrong Input\nPress any key to continue...");
 	char ch=getch();
 	if(ch==0){
@@ -75,7 +75,7 @@ int wrongStart()
 
 ///PAWN/////
 int pawn(int x,int y,int x1,int y1){
-	return 1;
+	return 1;		//remove the line
 	/*int a=0;
 	if(turn==0){
 		if(y==1){
@@ -134,7 +134,7 @@ int pawn(int x,int y,int x1,int y1){
 
 ///ROOK////
 int rook(int x,int y,int x1,int y1){
-	return 1;
+	return 1;   		//remove the line
 	/*int a=1;
 	if(y1==y)
 	{
@@ -186,7 +186,7 @@ int rook(int x,int y,int x1,int y1){
 
 ////////QUEEN///////
 int queen(int x,int y,int x1,int y1){
-   return 1;
+   return 1;			//remove the line
   /* if(x==x1||y==y1){
   //if queen moves in + direction
 	 return rook(x,y,x1,y1);
@@ -206,7 +206,7 @@ int queen(int x,int y,int x1,int y1){
 //////BISHOP/////
 int bishop(int x,int y,int x1,int y1)
 {
-		return 1;
+		return 1;			//remove the line
 		/*int a=1,i;
 		if(abs(x1-x)!=abs(y1-y))
 		{
@@ -249,7 +249,7 @@ int bishop(int x,int y,int x1,int y1)
 
 int horse(int x,int y,int x1,int y1)
 {
-	return 1;
+	return 1;				//remove the line
 	/*int a=0;
 	if((y1==y+2 && x1==x+1)||(y1==y+2 && x1==x-1)||(y1==y+1 && x1==x+2)||(y1==y+1 && x1==x-2)||(y1==y-1 && x1==x+2)||(y1==y-1 && x1==x-2)||(y1==y-2 && x1==x+1)||(y1==y-2 && x1==x-1)){
 		a = 1;
@@ -265,7 +265,7 @@ int horse(int x,int y,int x1,int y1)
 /////King/////
 int king(int x,int y,int x1,int y1)
 {
-     return 1;
+     return 1;				//remove the line
      /*int a = 0;
      if((y1 == y+1 && x1 == x)||(y1 == y-1 && x1 == x)||(y1 == y+1 && x1 == x+1)||(y1 == y+1 && x1 == x-1)||(y1 == y-1 && x1 == x+1)||(y1 == y-1 && x1 == x-1)||(y1 == y && x1 == x+1)||(y1 == y && x1 == x-1)){
 	a = 1;
@@ -299,7 +299,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 int check()
 {
-	  return 1;
+	  return 1;			//remove the line
 	  /*int t=0,i,j,x1,y1;
 	   if(turn==0){
 	     for(i=0;i<=7;i++)
@@ -377,7 +377,7 @@ return 0;*/
 
 //////GAME OVER/////
 int gameover(){
-	return 1;
+	return 1;				//remove the line
 	/*int i,j,a=0,b=0;
 
 	for(i=0;i<=7;i++)
