@@ -1,5 +1,5 @@
 //#include <graphics.h>
-#include < stdlib.h >
+//#include < stdlib.h >
 #include < stdio.h >
 #include < chess.h >					
 //#include <conio.h>
