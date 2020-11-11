@@ -852,7 +852,7 @@ int gameover(){
 ////////QUEEN///////
 int queen(int x,int y,int x1,int y1){
    return 1;
-   if(x==x1||y==y1){
+  /* if(x==x1||y==y1){
   //if queen moves in + direction
 	 return rook(x,y,x1,y1);
    }
@@ -861,5 +861,5 @@ int queen(int x,int y,int x1,int y1){
 	 return bishop(x,y,x1,y1);
    }
    else
-	 return 0;
+	 return 0;*/
 }
