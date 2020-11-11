@@ -7,17 +7,17 @@
 //#include <dos.h>                
 
 
-int board[8][8],turn=0,count1=0,count2=0;
-char strFileName[15];
+//int board[8][8],turn=0,count1=0,count2=0;
+//char strFileName[15];
 
 
 /*void gotoxy(int x, int y) { 
     printf("%c[%d;%df", 0x1B, y, x); 
 } */
 
-int wrongStart()
-{
-	return 1;
+//int wrongStart()
+//{
+//	return 1;
 	/*printf("\nWrong Input\nPress any key to continue...");
 	char ch=getch();
 	if(ch==0){
@@ -32,7 +32,7 @@ int wrongStart()
 	gotoxy(1,1);
 	printf("enter initial position ¯ ");
 	return 0;*/
-}
+//}
 
 
 
@@ -492,8 +492,8 @@ void printboard(){
 	
 
 
-int initialize(){
-	  return 1;
+//int initialize(){
+	  //return 1;
 	  //setcolor(WHITE);
 	 // rectangle(250,90,610,450);
 
@@ -539,13 +539,13 @@ int initialize(){
 	  outtextxy(220,375,"7");
 	  outtextxy(220,420,"8");
  	  return 0;*/
-}
+//}
 
 
 /////King/////
-int king(int x,int y,int x1,int y1)
-{
-     return 1;
+//int king(int x,int y,int x1,int y1)
+//{
+     //return 1;
      /*int a = 0;
      if((y1 == y+1 && x1 == x)||(y1 == y-1 && x1 == x)||(y1 == y+1 && x1 == x+1)||(y1 == y+1 && x1 == x-1)||(y1 == y-1 && x1 == x+1)||(y1 == y-1 && x1 == x-1)||(y1 == y && x1 == x+1)||(y1 == y && x1 == x-1)){
 	a = 1;
@@ -565,15 +565,15 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 			 count2=1;
 		}
 		return a;*/
-}
+//}
 
 
 
 
 //////BISHOP/////
-int bishop(int x,int y,int x1,int y1)
-{
-		return 1;
+//int bishop(int x,int y,int x1,int y1)
+//{
+		//return 1;
 		/*int a=1,i;
 		if(abs(x1-x)!=abs(y1-y))
 		{
@@ -608,14 +608,14 @@ int bishop(int x,int y,int x1,int y1)
 	 }
 	}
 	return a;*/
-	}
+	//}
 
 
 
 
 ///ROOK////
-int rook(int x,int y,int x1,int y1){
-	return 1;
+//int rook(int x,int y,int x1,int y1){
+	//return 1;
 	/*int a=1;
 	if(y1==y)
 	{
@@ -660,7 +660,7 @@ int rook(int x,int y,int x1,int y1){
 		a=0;
 	}
 	return a;*/
-	}
+	//}
 
 
 
@@ -668,8 +668,8 @@ int rook(int x,int y,int x1,int y1){
 
 
 ///PAWN/////
-int pawn(int x,int y,int x1,int y1){
-	return 1;
+//int pawn(int x,int y,int x1,int y1){
+	//return 1;
 	/*int a=0;
 	if(turn==0){
 		if(y==1){
@@ -723,7 +723,7 @@ int pawn(int x,int y,int x1,int y1){
      }
     }
  return a;*/
-}
+//}
 
 
 
@@ -733,9 +733,9 @@ int pawn(int x,int y,int x1,int y1){
 ////////Check////////
 
 
-int check()
-{
-	  return 1;
+//int check()
+//{
+	 // return 1;
 	  /*int t=0,i,j,x1,y1;
 	   if(turn==0){
 	     for(i=0;i<=7;i++)
@@ -805,15 +805,15 @@ int check()
        }//  for
  }// end else
 return 0;*/
-}
+//}
 
 
 
 
 
 //////GAME OVER/////
-int gameover(){
-	return 1;
+//int gameover(){
+	//return 1;
 	/*int i,j,a=0,b=0;
 
 	for(i=0;i<=7;i++)
@@ -844,14 +844,14 @@ int gameover(){
 		return 0;
 	}
 */
-}
+//}
 
 
 
 
 ////////QUEEN///////
-int queen(int x,int y,int x1,int y1){
-   return 1;
+//int queen(int x,int y,int x1,int y1){
+  // return 1;
   /* if(x==x1||y==y1){
   //if queen moves in + direction
 	 return rook(x,y,x1,y1);
@@ -862,4 +862,4 @@ int queen(int x,int y,int x1,int y1){
    }
    else
 	 return 0;*/
-}
+//}
