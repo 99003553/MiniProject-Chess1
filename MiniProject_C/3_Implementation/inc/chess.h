@@ -1,14 +1,14 @@
 //#include <graphics.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "chess.h"					
+#include <chess.h>					
 //#include <conio.h>
-#include <ctype.h>		
+//#include <ctype.h>		
 //#include <dos.h>               
 
 
 int main();
-void gotoxy(int x, int y);
+//void gotoxy(int x, int y);
 int gameover();
 void printboard();
 int wrongStart();
