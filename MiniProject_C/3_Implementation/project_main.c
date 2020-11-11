@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <chess.h>					
 //#include <conio.h>
-#include <ctype.h>		
+//#include <ctype.h>		
 //#include <dos.h>                
 
 
@@ -11,14 +11,14 @@ int board[8][8],turn=0,count1=0,count2=0;
 char strFileName[15];
 
 
-void gotoxy(int x, int y) { 
+/*void gotoxy(int x, int y) { 
     printf("%c[%d;%df", 0x1B, y, x); 
-} 
+} */
 
 int wrongStart()
 {
 	return 1;
-	printf("\nWrong Input\nPress any key to continue...");
+	/*printf("\nWrong Input\nPress any key to continue...");
 	char ch=getch();
 	if(ch==0){
 		getch();
@@ -31,20 +31,21 @@ int wrongStart()
 		}
 	gotoxy(1,1);
 	printf("enter initial position ¯ ");
-	return 0;
+	return 0;*/
 }
 
 
 
 /////ClearText////
 void cleartext(){
-	for(int i=1;i<=27;i++)
+	//return 1;
+	/*for(int i=1;i<=27;i++)
 		for(int j=1;j<=8;j++){
 			gotoxy(i,j);
 			printf(" ");
 			}
 	gotoxy(1,1);
-	printf("enter initial position ¯ ");
+	printf("enter initial position ¯ ");*/
 }
 
 
@@ -52,11 +53,11 @@ int main()
 {
 
 		//Graphics Initialization
-	int gdriver = DETECT;
+	/*int gdriver = DETECT;
 	int gmode;
 	initgraph(&gdriver,&gmode,"e:\\borlandc\\bgi");
 
-	/*Loading Intro
+	//Loading Intro
 	for(float i=0; i<=6;i=i+0.1)
 	{
 		setcolor(12);
@@ -70,7 +71,7 @@ int main()
 	getch();
 	cleardevice();
 
-	//Displaying Group Members
+
 	setcolor(CYAN);
 	outtextxy(50,220,"Designed by:");
 	setcolor(6);
@@ -98,10 +99,23 @@ int main()
 
 
 	cleartext();*/
-	initialize();
-	char ch;
 	int x=-1,y=-1,x1=-1,y1=-1;
-	setcolor(9);
+	initialize();
+	wrongStart();
+	pawn(x,y,x1,y1);
+	rook(x,y,x1,y1);
+	queen(x,y,x1,y1);
+	king(x,y,x1,y1);
+	bishop(x,y,x1,y1);
+	horse(x,y,x1,y1);
+	check();
+	gameover();
+	
+	
+	
+	//char ch;
+	//int x=-1,y=-1,x1=-1,y1=-1;
+	/*setcolor(9);
 	outtextxy(10,400,"Player 1");
 	for(;;)
 	{
@@ -111,15 +125,15 @@ int main()
 		   {
 			 break;
 		   }
-			FILE *fp;
-			ch=getch();
+			/*FILE *fp;
+			//ch=getch();
 			if(ch==0){
-			 ch=getch();
+			// ch=getch();
 			if(ch=='<')
 			{
 
 
-   /*  
+
  //////SAVE/////
 
 			  for(;;)
@@ -146,7 +160,7 @@ int main()
 						break;
 				}
 			 }//end for 
-*/
+
 			 fprintf(fp,"%d\n",turn);
 			 for(int i=0;i<8;i++)
 			 {
@@ -165,7 +179,7 @@ int main()
 			}
 			if(ch=='=')
 			{
-/*
+
  ////Load/////
 
 
@@ -186,7 +200,6 @@ int main()
 					break;
 				  }
 				}//end for
-*/
 				fscanf(fp,"%d",&turn);
 				for(int i=0;i<8;i++){
 				  for(int j=0;j<8;j++){
@@ -200,7 +213,7 @@ int main()
 				y=-1;
 				x1=-1;
 				y1=-1;
-				setcolor(0);
+				/*setcolor(0);
 				outtextxy(10,400,"Player Û");
 				if(turn!=0){
 					check();
@@ -228,7 +241,7 @@ int main()
 		continue;
 		}
 		if(x==-1){
-			ch=toupper(ch);
+			//ch=toupper(ch);
 			if(ch>=65 && ch<=72){
 				
 				printf("%s", &ch);
@@ -277,7 +290,7 @@ int main()
 		else if(x1==-1)
 		{		//Converting lower to upper case
 
-			ch=toupper(ch);
+			//ch=toupper(ch);
 			if(ch>=65 && ch<=72)
 			{
 				
@@ -335,7 +348,7 @@ int main()
 
 					
 					printf("\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\bwhich piece Q,R,H,B");
-			      		pp=getch();
+			      		//pp=getch();
 			      		if(turn==0){
 			       			if(pp=='r')
 						board[y1][x1]=1;
@@ -410,29 +423,29 @@ int main()
 			y=-1;
 			x1=-1;
 			y1=-1;
-		      setcolor(0);
-		      outtextxy(30,340,"Check");
+		     // setcolor(0);
+		     // outtextxy(30,340,"Check");
 			if(killed==0){
 				wrongStart();
 				continue;
 				}
 			cleartext();
-			setcolor(0);
-			outtextxy(10,400,"Player Û");
+			//setcolor(0);
+			//outtextxy(10,400,"Player Û");
 			if(turn==0){
 				check();
 				turn=1;
-				setcolor(2);
-				outtextxy(10,400,"Player 2");
+				//setcolor(2);
+				//outtextxy(10,400,"Player 2");
 				}
 			else{
 				check();
 				turn=0;
-				setcolor(9);
-				outtextxy(10,400,"Player 1");
+				//setcolor(9);
+				//outtextxy(10,400,"Player 1");
 				}
 			}//end legal move
-		}//end for
+		}//end for*/
 		return 0;
 }
 //end main
@@ -440,52 +453,52 @@ int main()
 
 
 void printboard(){
-	for(int i=0;i<8;i++){
+	/*for(int i=0;i<8;i++){
 		for(int j=0;j<8;j++){
 			if((i+j)%2==0)
-				setcolor(WHITE);
+				//setcolor(WHITE);
 			else
-				setcolor(BLACK);
+				//setcolor(BLACK);
 
-			outtextxy(270+(j*45),105+(i*45),"ÛÛ");
+			//outtextxy(270+(j*45),105+(i*45),"ÛÛ");
 
 
 			if(board[i][j]<0)
-				setcolor(GREEN);
+				//setcolor(GREEN);
 			else if(board[i][j]>0)
-				setcolor(9);
+				//setcolor(9);
 
 			if(abs(board[i][j])>=9 && abs(board[i][j])<=16){
-			  outtextxy(270+(j*45),105+(i*45),"P");}
+			 // outtextxy(270+(j*45),105+(i*45),"P");}
 
 			else if(abs(board[i][j])==1 || abs(board[i][j])==8){
-			  outtextxy(270+(j*45),105+(i*45),"R");}
+			  //outtextxy(270+(j*45),105+(i*45),"R");}
 
 			else if(abs(board[i][j])==2 || abs(board[i][j])==7){
-			  outtextxy(270+(j*45),105+(i*45),"H");
+			 // outtextxy(270+(j*45),105+(i*45),"H");
 			  }
 			else if(abs(board[i][j])==3 || abs(board[i][j])==6){
-			  outtextxy(270+(j*45),105+(i*45),"B");
+			 // outtextxy(270+(j*45),105+(i*45),"B");
 			  }
 			else if(abs(board[i][j])==4){
-			  outtextxy(270+(j*45),105+(i*45),"Q");
+			 // outtextxy(270+(j*45),105+(i*45),"Q");
 			  }
 			else if(abs(board[i][j])==5){
-			  outtextxy(270+(j*45),105+(i*45),"K");
+			 // outtextxy(270+(j*45),105+(i*45),"K");
 			  }
 			}
-		}
+		}*/
 	}
 	
 
 
 int initialize(){
 	  return 1;
-	  setcolor(WHITE);
-	  rectangle(250,90,610,450);
+	  //setcolor(WHITE);
+	 // rectangle(250,90,610,450);
 
 	  // Board Printing
-	  for (int i=250;i<560;i+=90)
+	 /* for (int i=250;i<560;i+=90)
 		for (int j=90;j<450;j+=90)
 		 {
 		 bar(i,j,i+45,j+45);
@@ -525,7 +538,7 @@ int initialize(){
 	  outtextxy(220,330,"6");
 	  outtextxy(220,375,"7");
 	  outtextxy(220,420,"8");
- 	  return 0;
+ 	  return 0;*/
 }
 
 
@@ -533,7 +546,7 @@ int initialize(){
 int king(int x,int y,int x1,int y1)
 {
      return 1;
-     int a = 0;
+     /*int a = 0;
      if((y1 == y+1 && x1 == x)||(y1 == y-1 && x1 == x)||(y1 == y+1 && x1 == x+1)||(y1 == y+1 && x1 == x-1)||(y1 == y-1 && x1 == x+1)||(y1 == y-1 && x1 == x-1)||(y1 == y && x1 == x+1)||(y1 == y && x1 == x-1)){
 	a = 1;
 }
@@ -551,7 +564,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 			 if(board[y][x]==-5)
 			 count2=1;
 		}
-		return a;
+		return a;*/
 }
 
 
@@ -561,7 +574,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 int bishop(int x,int y,int x1,int y1)
 {
 		return 1;
-		int a=1,i;
+		/*int a=1,i;
 		if(abs(x1-x)!=abs(y1-y))
 		{
 			a=0;
@@ -594,7 +607,7 @@ int bishop(int x,int y,int x1,int y1)
 	    a=0;
 	 }
 	}
-	return a;
+	return a;*/
 	}
 
 
@@ -603,7 +616,7 @@ int bishop(int x,int y,int x1,int y1)
 ///ROOK////
 int rook(int x,int y,int x1,int y1){
 	return 1;
-	int a=1;
+	/*int a=1;
 	if(y1==y)
 	{
 		for(int i=x+1;i<x1;i++)
@@ -646,7 +659,7 @@ int rook(int x,int y,int x1,int y1){
 	{
 		a=0;
 	}
-	return a;
+	return a;*/
 	}
 
 
@@ -657,7 +670,7 @@ int rook(int x,int y,int x1,int y1){
 ///PAWN/////
 int pawn(int x,int y,int x1,int y1){
 	return 1;
-	int a=0;
+	/*int a=0;
 	if(turn==0){
 		if(y==1){
 		  if(y1==(y+2) && x1==x){
@@ -709,7 +722,7 @@ int pawn(int x,int y,int x1,int y1){
 	return 2;
      }
     }
- return a;
+ return a;*/
 }
 
 
@@ -723,7 +736,7 @@ int pawn(int x,int y,int x1,int y1){
 int check()
 {
 	  return 1;
-	  int t=0,i,j,x1,y1;
+	  /*int t=0,i,j,x1,y1;
 	   if(turn==0){
 	     for(i=0;i<=7;i++)
 	     {
@@ -791,7 +804,7 @@ int check()
 	}// for
        }//  for
  }// end else
-return 0;
+return 0;*/
 }
 
 
@@ -801,7 +814,7 @@ return 0;
 //////GAME OVER/////
 int gameover(){
 	return 1;
-	int i,j,a=0,b=0;
+	/*int i,j,a=0,b=0;
 
 	for(i=0;i<=7;i++)
 	{
@@ -830,7 +843,7 @@ int gameover(){
 		getch();
 		return 0;
 	}
-return 1;
+*/
 }
 
 
