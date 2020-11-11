@@ -3,7 +3,7 @@
 
 /* Modify these two lines according to the project */
 #include <chess.h>
-#define PROJECT_NAME    "CHESS mini"
+#define PROJECT_NAME    "Chessmini"
 
 /* Prototypes for all the test functions */
 void test_initialize(void);
