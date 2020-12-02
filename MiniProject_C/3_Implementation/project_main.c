@@ -27,7 +27,7 @@ void cleartext(){
 	gotoxy(1,1);
 	printf("enter initial position ¯ ");*/
 }
-class Pieces {
+/*class Pieces {
      private:
 	int pawn(int x,int y,int x1,int y1);
         int horse(int x,int y,int x1,int y1);
@@ -35,7 +35,7 @@ class Pieces {
         int bishop(int x,int y,int x1,int y1);
         int queen(int x,int y,int x1,int y1);
         int king(int x,int y,int x1,int y1);
-};
+*/};
 int main()
 {
 
@@ -86,16 +86,16 @@ int main()
 
 
 	cleartext();*/
-	Pieces ches;			
+	//Pieces ches;			
 	int x=-1,y=-1,x1=-1,y1=-1;  //remove the line
 	initialize();			//remove the line
 	wrongStart();			//remove the line
-	ches.pawn(x,y,x1,y1);			//remove the line
-	ches.rook(x,y,x1,y1);			//remove the line
-	ches.queen(x,y,x1,y1);			//remove the line
-	ches.king(x,y,x1,y1);			//remove the line
-	ches.bishop(x,y,x1,y1);				//remove the line	
-	ches.horse(x,y,x1,y1);				//remove the line
+	pawn(x,y,x1,y1);			//remove the line
+	rook(x,y,x1,y1);			//remove the line
+	queen(x,y,x1,y1);			//remove the line
+	king(x,y,x1,y1);			//remove the line
+	bishop(x,y,x1,y1);				//remove the line	
+	horse(x,y,x1,y1);				//remove the line
 	check();					//remove the line
 	gameover();						//remove the line
 	
@@ -309,7 +309,7 @@ int main()
 ////queen///
 
 		      else if(abs(board[y][x])==4){	////if piece selscted has value 4
-				b = queen(x,y,x1,y1);
+				b = ches.queen(x,y,x1,y1);
 				}//end queen
 ///king///
 
