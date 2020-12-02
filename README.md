@@ -1,9 +1,9 @@
 # MiniProject-Chess
 
-![Unit testing](https://github.com/stepin104484/MiniProject-Chess/workflows/Unit%20testing/badge.svg)
-![cppcheck-action](https://github.com/stepin104484/MiniProject-Chess/workflows/cppcheck-action/badge.svg)
-![C/C++ CI](https://github.com/stepin104484/MiniProject-Chess/workflows/C/C++%20CI/badge.svg)
-![Valgrind](https://github.com/stepin104484/MiniProject-Chess/workflows/Valgrind/badge.svg)
+![Unit testing](https://github.com/stepin104484/MiniProject-Chess1/workflows/Unit%20testing/badge.svg)
+![cppcheck-action](https://github.com/stepin104484/MiniProject-Chess1/workflows/cppcheck-action/badge.svg)
+![C/C++ CI](https://github.com/stepin104484/MiniProject-Chess1/workflows/C/C++%20CI/badge.svg)
+![Valgrind](https://github.com/stepin104484/MiniProject-Chess1/workflows/Valgrind/badge.svg)
 
 
 
@@ -14,6 +14,7 @@
 
 
 The Mini-Project is a game of chess that can be played by two players using keyboard.
+The project is made using C++ programming language.
 The game is started by moving white pieces. The game is designed based on the rules of chess.
 The game is created in CodeBlocks-EP which support the graphical contents required.
 The code will provide error if the code is run using CodeBlocks
