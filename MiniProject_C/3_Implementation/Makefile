@@ -10,7 +10,7 @@ src/chess.cpp\
 
 # All test source files
 TEST_SRC = src/chess.cpp\
-test/test_Chessmini.c
+test/test_Chessmini.cpp
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
