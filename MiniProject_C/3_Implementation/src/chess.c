@@ -74,7 +74,8 @@ int wrongStart()
 
 
 ///PAWN/////
-int Pieces::pawn(int x,int y,int x1,int y1){
+//int Pieces::pawn(int x,int y,int x1,int y1){
+int pawn(int x,int y,int x1,int y1){   //remove the line
 	return 1;		//remove the line
 	/*int a=0;
 	if(turn==0){
@@ -133,7 +134,8 @@ int Pieces::pawn(int x,int y,int x1,int y1){
 
 
 ///ROOK////
-int Pieces::rook(int x,int y,int x1,int y1){
+//int Pieces::rook(int x,int y,int x1,int y1){
+int rook(int x,int y,int x1,int y1){	//remove the line
 	return 1;   		//remove the line
 	/*int a=1;
 	if(y1==y)
@@ -185,7 +187,8 @@ int Pieces::rook(int x,int y,int x1,int y1){
 
 
 ////////QUEEN///////
-int Pieces::queen(int x,int y,int x1,int y1){
+//int Pieces::queen(int x,int y,int x1,int y1){
+int queen(int x,int y,int x1,int y1){	//remove the line
    return 1;			//remove the line
   /* if(x==x1||y==y1){
   //if queen moves in + direction
@@ -204,7 +207,8 @@ int Pieces::queen(int x,int y,int x1,int y1){
 
 
 //////BISHOP/////
-int Pieces::bishop(int x,int y,int x1,int y1)
+//int Pieces::bishop(int x,int y,int x1,int y1)
+int bishop(int x,int y,int x1,int y1)	//remove the line
 {
 		return 1;			//remove the line
 		/*int a=1,i;
@@ -247,7 +251,8 @@ int Pieces::bishop(int x,int y,int x1,int y1)
 
 ////HORSE//////
 
-int Pieces::horse(int x,int y,int x1,int y1)
+//int Pieces::horse(int x,int y,int x1,int y1)
+int horse(int x,int y,int x1,int y1)	//remove the line
 {
 	return 1;				//remove the line
 	/*int a=0;
@@ -264,6 +269,7 @@ int Pieces::horse(int x,int y,int x1,int y1)
 
 /////King/////
 int Pieces::king(int x,int y,int x1,int y1)
+int king(int x,int y,int x1,int y1)	//remove the line
 {
      return 1;				//remove the line
      /*int a = 0;
