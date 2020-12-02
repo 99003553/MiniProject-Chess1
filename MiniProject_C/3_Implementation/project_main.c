@@ -6,7 +6,7 @@
 //#include <conio.h>
 //#include <ctype.h>		
 //#include <dos.h>                
-
+#include <Pieces.h>
 
 //int board[8][8],turn=0,count1=0,count2=0;
 //char strFileName[15];
