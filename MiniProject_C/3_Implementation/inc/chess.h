@@ -20,6 +20,7 @@
 * @note initialize() used to initialize the chess game.
 * @note cleartext() used to clear the screen.
 * @note check() used to check if checkmate is achieved.
+* @note class Pieces used to define all pieces into a class.
 * @note pawn() used to check the movements of pawn.
 * @note horse() used to check the movements of horse.
 * @note rook() used to check the movements of rook.
@@ -55,12 +56,13 @@ void test_horse();
 void test_king();
 void test_check();
 void test_gameover();
-
+class Pieces{
+  private:
 int pawn(int x,int y,int x1,int y1);
 int horse(int x,int y,int x1,int y1);
 int rook(int x,int y,int x1,int y1);
 int bishop(int x,int y,int x1,int y1);
 int queen(int x,int y,int x1,int y1);
 int king(int x,int y,int x1,int y1);
-
+};
 #endif
