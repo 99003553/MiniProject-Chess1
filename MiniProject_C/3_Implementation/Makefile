@@ -5,12 +5,12 @@ PROJECT_NAME = Chessmini
 BUILD = build
 
 # All source code files
-SRC = project_main.c\
-src/chess.c\
+SRC = project_main.cpp\
+src/chess.cpp\
 
 # All test source files
-TEST_SRC = src/chess.c\
-test/test_Chessmini.c
+TEST_SRC = src/chess.cpp\
+test/test_Chessmini.cpp
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
