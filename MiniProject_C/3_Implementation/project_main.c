@@ -27,8 +27,15 @@ void cleartext(){
 	gotoxy(1,1);
 	printf("enter initial position ¯ ");*/
 }
-
-
+class Pieces {
+     private:
+	int pawn(int x,int y,int x1,int y1);
+        int horse(int x,int y,int x1,int y1);
+        int rook(int x,int y,int x1,int y1);
+        int bishop(int x,int y,int x1,int y1);
+        int queen(int x,int y,int x1,int y1);
+        int king(int x,int y,int x1,int y1);
+};
 int main()
 {
 
@@ -79,15 +86,16 @@ int main()
 
 
 	cleartext();*/
+	Pieces ches;			
 	int x=-1,y=-1,x1=-1,y1=-1;  //remove the line
 	initialize();			//remove the line
 	wrongStart();			//remove the line
-	pawn(x,y,x1,y1);			//remove the line
-	rook(x,y,x1,y1);			//remove the line
-	queen(x,y,x1,y1);			//remove the line
-	king(x,y,x1,y1);			//remove the line
-	bishop(x,y,x1,y1);				//remove the line	
-	horse(x,y,x1,y1);				//remove the line
+	ches.pawn(x,y,x1,y1);			//remove the line
+	ches.rook(x,y,x1,y1);			//remove the line
+	ches.queen(x,y,x1,y1);			//remove the line
+	ches.king(x,y,x1,y1);			//remove the line
+	ches.bishop(x,y,x1,y1);				//remove the line	
+	ches.horse(x,y,x1,y1);				//remove the line
 	check();					//remove the line
 	gameover();						//remove the line
 	
@@ -119,14 +127,14 @@ int main()
 			  for(;;)
 			  {
 				
-				printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\b\b\bEnter File name to save \n");
-				
-				gets(strFileName);
+				cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\b\b\bEnter File name to save \n";
+				cin>>strFileName;  //Enter File Name
 				fp=fopen(strFileName,"r+");
 				if(fp!=NULL)
 				{
 					
-					printf("File already exist\n");
+					cout<<"File already exist\n";
+
 				}
 				else
 				{
@@ -134,7 +142,7 @@ int main()
 					   if(fp==NULL)
 					   {
 					   	
-					   	printf("Invalid File Name\n");
+					   	cout<<"Invalid File Name\n";
 					   }
 					   else
 						break;
@@ -166,14 +174,13 @@ int main()
 				for(;;)
 				{
 				
-				printf("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\b\b\b\b\bEnter File name to Load \n");
-				
-				gets(strFileName);
+				cout<<"\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\b\b\b\b\bEnter File name to Load \n";
+				  cin>>strFileName;
 				fp=fopen(strFileName,"r+");
 				if(fp==NULL)
 				  {
 					
-					printf("File does not exist\n");
+					 cout<<"File does not exist\n";
 				  }
 				else
 				  {
@@ -224,7 +231,7 @@ int main()
 			//ch=toupper(ch);
 			if(ch>=65 && ch<=72){
 				
-				printf("%s", &ch);
+				cout<<ch;
 				x=ch-65;
 				}
 			}
@@ -233,7 +240,7 @@ int main()
 			if(ch>='1' && ch<='8')
 			{
 				
-				printf("%s", &ch);
+				cout<<ch;
 				y=ch-'1';
 				if(board[y][x]==0){
 					wrongStart();
@@ -265,7 +272,7 @@ int main()
 			}
 			if(x!=-1 && y!=-1)
 				
-				printf("\nenter final position  ¯ ");
+				cout<<"\nenter final position  ¯ ";
 		}
 		else if(x1==-1)
 		{		//Converting lower to upper case
@@ -274,7 +281,7 @@ int main()
 			if(ch>=65 && ch<=72)
 			{
 				
-				printf("%s", &ch);
+				cout<<ch;
 				x1=ch-65;
 			}
 		}
@@ -283,20 +290,20 @@ int main()
 			if(ch>='1' && ch<='8')
 			{
 				
-				printf("%s", &ch);
+				cout<<ch;
 				y1=ch-'1';
 			}
 		int b=0,killed=0;
 /////pawn/////
 
      if(abs(board[y][x])>=9 && abs(board[y][x])<=16){	//if piece selscted has value greater than 8 and less than 17
-				b = pawn(x,y,x1,y1);
+				b = ches.pawn(x,y,x1,y1);
 				}//end pawn
 
 //////horse//////
 
 		      else if(abs(board[y][x])==2 || abs(board[y][x])==7){	   //if piece selscted has value 2 and 7
-				b = horse(x,y,x1,y1);
+				b = ches.horse(x,y,x1,y1);
 				}//end horse
 
 ////queen///
@@ -307,19 +314,19 @@ int main()
 ///king///
 
 		      else if(abs(board[y][x])==5){	//if piece selscted has value 5
-				b = king(x,y,x1,y1);
+				b = ches.king(x,y,x1,y1);
 			 }//end king
 
 ///rook///
 
 		      else if(abs(board[y][x])==1 || abs(board[y][x])==8){	   //if piece selscted has value 1 and 8
-				b = rook(x,y,x1,y1);
+				b = ches.rook(x,y,x1,y1);
 				}//end rook
 
 ///bishop///
 
 		      else if(abs(board[y][x])==3 || abs(board[y][x])==6){	   //if piece selscted has value 3 and 6
-				b = bishop(x,y,x1,y1);
+				b = ches.bishop(x,y,x1,y1);
 				}//end bishop
 
 			if(b==2){
@@ -327,8 +334,8 @@ int main()
 			     		char pp;
 
 					
-					printf("\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\bwhich piece Q,R,H,B");
-			      		//pp=getch();
+					cout<<"\n\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\\bwhich piece Q,R,H,B";
+			      		pp=getch();
 			      		if(turn==0){
 			       			if(pp=='r')
 						board[y1][x1]=1;
@@ -403,26 +410,26 @@ int main()
 			y=-1;
 			x1=-1;
 			y1=-1;
-		     // setcolor(0);
-		     // outtextxy(30,340,"Check");
+		        setcolor(0);
+		        outtextxy(30,340,"Check");
 			if(killed==0){
 				wrongStart();
 				continue;
 				}
 			cleartext();
-			//setcolor(0);
-			//outtextxy(10,400,"Player Û");
+			setcolor(0);
+			outtextxy(10,400,"Player Û");
 			if(turn==0){
 				check();
 				turn=1;
-				//setcolor(2);
-				//outtextxy(10,400,"Player 2");
+				setcolor(2);
+				outtextxy(10,400,"Player 2");
 				}
 			else{
 				check();
 				turn=0;
-				//setcolor(9);
-				//outtextxy(10,400,"Player 1");
+				setcolor(9);
+				outtextxy(10,400,"Player 1");
 				}
 			}//end legal move
 		}//end for*/
@@ -436,35 +443,35 @@ void printboard(){
 	/*for(int i=0;i<8;i++){
 		for(int j=0;j<8;j++){
 			if((i+j)%2==0)
-				//setcolor(WHITE);
+				setcolor(WHITE);
 			else
-				//setcolor(BLACK);
+				setcolor(BLACK);
 
 			//outtextxy(270+(j*45),105+(i*45),"ÛÛ");
 
 
 			if(board[i][j]<0)
-				//setcolor(GREEN);
+				setcolor(GREEN);
 			else if(board[i][j]>0)
-				//setcolor(9);
+				setcolor(9);
 
 			if(abs(board[i][j])>=9 && abs(board[i][j])<=16){
-			 // outtextxy(270+(j*45),105+(i*45),"P");}
+			 outtextxy(270+(j*45),105+(i*45),"P");}
 
 			else if(abs(board[i][j])==1 || abs(board[i][j])==8){
-			  //outtextxy(270+(j*45),105+(i*45),"R");}
+			  outtextxy(270+(j*45),105+(i*45),"R");}
 
 			else if(abs(board[i][j])==2 || abs(board[i][j])==7){
-			 // outtextxy(270+(j*45),105+(i*45),"H");
+			 outtextxy(270+(j*45),105+(i*45),"H");
 			  }
 			else if(abs(board[i][j])==3 || abs(board[i][j])==6){
-			 // outtextxy(270+(j*45),105+(i*45),"B");
+			 outtextxy(270+(j*45),105+(i*45),"B");
 			  }
 			else if(abs(board[i][j])==4){
-			 // outtextxy(270+(j*45),105+(i*45),"Q");
+			 outtextxy(270+(j*45),105+(i*45),"Q");
 			  }
 			else if(abs(board[i][j])==5){
-			 // outtextxy(270+(j*45),105+(i*45),"K");
+			  outtextxy(270+(j*45),105+(i*45),"K");
 			  }
 			}
 		}*/
@@ -523,7 +530,7 @@ void printboard(){
 
 
 /////King/////
-//int king(int x,int y,int x1,int y1)
+//int Pieces::king(int x,int y,int x1,int y1)
 //{
      //return 1;			//remove the line
      /*int a = 0;
@@ -551,7 +558,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 
 //////BISHOP/////
-//int bishop(int x,int y,int x1,int y1)
+//int Pieces::bishop(int x,int y,int x1,int y1)
 //{
 		//return 1;			//remove the line
 		/*int a=1,i;
@@ -594,7 +601,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 
 ///ROOK////
-//int rook(int x,int y,int x1,int y1){
+//int Pieces::rook(int x,int y,int x1,int y1){
 	//return 1;			//remove the line
 	/*int a=1;
 	if(y1==y)
@@ -648,7 +655,7 @@ if(board[y][x+1] == 0 && board[y][x+2] == 0 && (abs(board[y1][x1]) == abs(board[
 
 
 ///PAWN/////
-//int pawn(int x,int y,int x1,int y1){
+//int Pieces::pawn(int x,int y,int x1,int y1){
 	//return 1;			//remove the line
 	/*int a=0;
 	if(turn==0){
@@ -830,7 +837,7 @@ return 0;*/
 
 
 ////////QUEEN///////
-//int queen(int x,int y,int x1,int y1){
+//int Pieces::queen(int x,int y,int x1,int y1){
   // return 1;			//remove the line
   /* if(x==x1||y==y1){
   //if queen moves in + direction
