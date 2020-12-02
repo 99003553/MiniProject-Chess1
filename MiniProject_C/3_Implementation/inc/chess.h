@@ -56,13 +56,13 @@ void test_horse();
 void test_king();
 void test_check();
 void test_gameover();
-class Pieces{
-  private:
+//class Pieces{
+  //private:
 int pawn(int x,int y,int x1,int y1);
 int horse(int x,int y,int x1,int y1);
 int rook(int x,int y,int x1,int y1);
 int bishop(int x,int y,int x1,int y1);
 int queen(int x,int y,int x1,int y1);
 int king(int x,int y,int x1,int y1);
-};
+//};
 #endif
