@@ -70,38 +70,38 @@ void test_wrongStart(void) {
 }
 
 void test_pawn(void) {
-  CU_ASSERT(1 == pawn(5,1,5,2));
+  CU_ASSERT(1 == ches.pawn(5,1,5,2));
   
   /* Dummy fail*/
 /*  CU_ASSERT(2 == multiply(2, 5));  */
 }
 
 void test_rook(void) {
-  CU_ASSERT(1 == rook(0,0,0,1));
+  CU_ASSERT(1 == ches.rook(0,0,0,1));
   
   /* Dummy fail*/
 /*  CU_ASSERT(3 == divide(2, 2)); */
 }
 void test_queen(void) {
-  CU_ASSERT(1 == queen(4,7,4,6));
+  CU_ASSERT(1 == ches.queen(4,7,4,6));
   
   /* Dummy fail*/
 /*  CU_ASSERT(3 == divide(2, 2)); */
 }
 void test_bishop(void) {
-  CU_ASSERT(1 == bishop(5,7,4,7));
+  CU_ASSERT(1 == ches.bishop(5,7,4,7));
   
   /* Dummy fail*/
 /*  CU_ASSERT(3 == divide(2, 2)); */
 }
 void test_horse(void) {
-  CU_ASSERT(1 == horse(1,7,1,6));
+  CU_ASSERT(1 == ches.horse(1,7,1,6));
   
   /* Dummy fail*/
 /*  CU_ASSERT(3 == divide(2, 2)); */
 }
 void test_king(void) {
-  CU_ASSERT(1 == king(3,7,3,6));
+  CU_ASSERT(1 == ches.king(3,7,3,6));
   
   /* Dummy fail*/
 /*  CU_ASSERT(3 == divide(2, 2)); */
