@@ -268,7 +268,7 @@ int horse(int x,int y,int x1,int y1)	//remove the line
 
 
 /////King/////
-int Pieces::king(int x,int y,int x1,int y1)
+//int Pieces::king(int x,int y,int x1,int y1)
 int king(int x,int y,int x1,int y1)	//remove the line
 {
      return 1;				//remove the line
