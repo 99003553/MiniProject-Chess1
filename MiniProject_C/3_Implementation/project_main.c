@@ -1,4 +1,4 @@
-//Kindly backspace the comments(//) to properly execute the code.
+//Kindly backspace the comments(//,/*) to properly execute the code.
 //#include <graphics.h>   
 //#include < stdlib.h >
 #include <stdio.h>
