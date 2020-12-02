@@ -35,7 +35,7 @@ void cleartext(){
         int bishop(int x,int y,int x1,int y1);
         int queen(int x,int y,int x1,int y1);
         int king(int x,int y,int x1,int y1);
-*/};
+};*/
 int main()
 {
 
